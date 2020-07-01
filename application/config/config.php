@@ -25,7 +25,22 @@ $config['app_version'] = '3.14.2';
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://192.168.15.66/master/';
+#$config['base_url'] = 'http://192.168.15.252/mapos';
+$URL_ATUAL = "http://$_SERVER[HTTP_HOST]";
+
+if($URL_ATUAL == 'http://168.181.144.6')
+{
+$config['base_url'] = 'http://168.181.144.6/mapos';
+}
+else
+if($URL_ATUAL == 'http://asterixcotelecom.ddns.net')
+{
+$config['base_url'] = 'http://asterixcotelecom.ddns.net/mapos';
+}
+else
+{
+$config['base_url'] = 'http://192.168.15.252/mapos';
+}
 
 /*
 |--------------------------------------------------------------------------
